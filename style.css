@@ -61,6 +61,7 @@ body {
 }
 
 nav {
+  min-height: 100vh;
   width: 300px;
   background-color: #4acaa8;
 }
@@ -86,11 +87,14 @@ nav footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
 }
 
 nav footer ul {
   list-style-type: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 ul.nav-items li {
@@ -126,15 +130,15 @@ ul.nav-items li.active a {
 }
 
 .nav-wrapper {
-  height: 100vh;
-  position: sticky;
+  align-self: flex-start;
   top: 0;
   display: flex;
+  position: sticky;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 30px;
-  overflow: auto;
+  overflow: scroll;
 }
 main {
   flex: 1;
@@ -160,6 +164,8 @@ ul.icons {
   gap: 10px;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  margin: 0;
 }
 
 .icons a {
