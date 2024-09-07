@@ -155,6 +155,23 @@ main {
   font-size: 9pt;
 }
 
+ul.icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons a {
+  text-decoration: none;
+  border: none;
+}
+
+.icons img {
+  width: 25px;
+  padding: 0;
+}
+
 .main-wrapper {
   margin-top: 50px;
   width: 100%;
@@ -167,20 +184,6 @@ main footer ul {
   list-style-type: none;
   display: flex;
   gap: 5px;
-}
-
-.icon {
-  text-decoration: none;
-  border-bottom: none;
-  position: relative;
-}
-
-.icon:before {
-  font-family: FontAwesome;
-}
-
-.icon > .label {
-  display: none;
 }
 
 .mobile-nav {
