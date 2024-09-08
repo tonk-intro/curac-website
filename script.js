@@ -1,6 +1,6 @@
 const mobileNav = document.querySelector(".mobile-nav");
 
-const showMenuButton = document.querySelector("button");
+const showMenuButton = document.getElementById("showMenuButton");
 
 const navItems = mobileNav.querySelector("ul");
 
