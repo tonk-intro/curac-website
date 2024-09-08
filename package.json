@@ -1,0 +1,17 @@
+{
+  "name": "curac-website",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Website of the Cambridge University Rambling Club",
+  "main": "generator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node generator.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dom-parser": "^1.1.5"
+  }
+}
