@@ -11,9 +11,8 @@ const pages = fs.readdirSync("./src/pages");
 for (const page of pages) {
   const currentFile = fs.readFileSync("./src/pages/" + page, "utf8");
 
-  const output = template
-    .replace("<section></section>", currentFile)
-    .replaceAll('<li><a href="' + page, '<li class="active"><a href="' + page);
+  const output = template.replace("PLACEHOLDER", currentFile);
+  // .replaceAll('<li><a href="' + page, '<li class="active"><a href="' + page);
 
   fs.writeFileSync("./dist/" + page, output);
 }

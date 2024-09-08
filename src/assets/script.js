@@ -5,7 +5,6 @@ const showMenuButton = document.getElementById("showMenuButton");
 const navItems = mobileNav.querySelector("ul");
 
 showMenuButton.addEventListener("click", (e) => {
-  e.target.blur();
   if (!navItems.style.display || navItems.style.display == "none") {
     navItems.style.display = "flex";
     showMenuButton.innerText = "Hide Menu";
@@ -13,4 +12,16 @@ showMenuButton.addEventListener("click", (e) => {
     navItems.style.display = "none";
     showMenuButton.innerText = "Show Menu";
   }
+});
+
+const currentUrl = window.location.href;
+let fileName = currentUrl.split("/").pop();
+
+if (!fileName.includes("html")) {
+  fileName = "index.html";
+}
+
+const navLinks = document.querySelectorAll("a[href='" + fileName + "'");
+navLinks.forEach((link) => {
+  link.parentElement.classList.add("active");
 });
