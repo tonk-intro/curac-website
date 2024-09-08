@@ -233,7 +233,10 @@ ul.mobile-icons {
   display: none;
 }
 
-@media (width < 600px) {
+@media (max-width: 600px) {
+  main {
+    overflow: visible;
+  }
   .main-wrapper {
     margin-top: 0px;
   }
