@@ -216,15 +216,16 @@ main footer ul {
   color: white;
   padding: 10px;
   font-family: inherit;
+  font-size: 11pt;
   background-color: #4acaa8;
   transition: background-color 0.2s;
 }
 
-.mobile-nav button:hover {
+/* .mobile-nav button:hover {
   color: #4acaa8;
   background-color: white;
 }
-
+ */
 .mobile-nav ul {
   display: none;
 }
@@ -262,6 +263,13 @@ ul.mobile-icons {
     display: flex;
     flex-direction: column;
   }
+}
+
+.mobile-nav-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 table {
