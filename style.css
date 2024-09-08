@@ -15,6 +15,10 @@ textarea {
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto 300px;
+  background: #fff;
 }
 
 a {
@@ -54,15 +58,8 @@ img {
   max-width: 300px;
 }
 
-body {
-  display: flex;
-  flex-direction: row-reverse;
-  background: #fff;
-}
-
 nav {
-  /* min-height: 100vh; */
-  width: 300px;
+  background-color: #4acaa8;
 }
 
 ul.nav-items {
@@ -128,21 +125,13 @@ ul.nav-items li.active a {
   color: #4acaa8;
 }
 
-.outer-nav-wrapper {
-  width: 300px;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  overflow: scroll;
-  position: fixed;
-  background-color: #4acaa8;
-}
 .nav-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 30px;
+  height: 100%;
 }
 
 .nav-wrapper img {
@@ -152,7 +141,7 @@ ul.nav-items li.active a {
 }
 
 main {
-  flex: 1;
+  overflow: auto;
 }
 
 .main-wrapper section {
@@ -250,7 +239,8 @@ ul.mobile-icons {
   }
 
   body {
-    flex-direction: column;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
   }
 
   nav {

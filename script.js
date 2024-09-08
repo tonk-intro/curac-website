@@ -6,7 +6,7 @@ const navItems = mobileNav.querySelector("ul");
 
 showMenuButton.addEventListener("click", (e) => {
   if (!navItems.style.display || navItems.style.display == "none") {
-    navItems.style.display = "block";
+    navItems.style.display = "flex";
     showMenuButton.innerText = "Hide Menu";
   } else {
     navItems.style.display = "none";
