@@ -8,23 +8,18 @@ const targetDir = secrets.targetDir;
 
 let sftp = new Client();
 
-sftp
-  .connect({
-    host: secrets.host,
-    port: secrets.port,
-    username: secrets.username,
-    password: secrets.password,
-  })
-  .then(() => {
-    return sftp.delete(targetDir + "index.html", true);
-  })
-  .then(() => {
-    return sftp.put(sourceDir + "index.html", targetDir + "index.html");
-  })
-  .then(() => {
-    return sftp.end();
-  })
-  .catch((err) => {
-    console.log(err, "caught error");
-    return sftp.end();
-  });
+await sftp.connect({
+  host: secrets.host,
+  port: secrets.port,
+  username: secrets.username,
+  password: secrets.password,
+});
+
+const pages = fs.readdirSync(sourceDir);
+
+for (const page of pages) {
+  //   await sftp.delete(targetDir + page, true);
+  await sftp.put(sourceDir + page, targetDir + page);
+}
+
+await sftp.end();
