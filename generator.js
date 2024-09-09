@@ -8,6 +8,10 @@ try {
 
 const pages = fs.readdirSync("./src/pages");
 
+if (!fs.existsSync("./dist")) {
+  fs.mkdirSync("./dist");
+}
+
 for (const page of pages) {
   const currentFile = fs.readFileSync("./src/pages/" + page, "utf8");
 
