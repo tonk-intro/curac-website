@@ -10,8 +10,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "dom-parser": "^1.1.5"
-  }
+  "license": "ISC"
+
 }
