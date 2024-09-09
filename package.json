@@ -6,10 +6,14 @@
   "main": "generator.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node generator.js"
+    "build": "node generator.js",
+    "deploy": "node deploy.js"
+
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
-
+  "license": "ISC",
+  "dependencies": {
+    "ssh2-sftp-client": "^11.0.0"
+  }
 }
