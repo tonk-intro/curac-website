@@ -19,7 +19,11 @@ const pages = fs.readdirSync(sourceDir);
 
 for (const page of pages) {
   //   await sftp.delete(targetDir + page, true);
-  await sftp.put(sourceDir + page, targetDir + page);
+  await sftp.put(sourceDir + page, targetDir + page, {
+    writeStreamOptions: {
+      mode: 0o664,
+    },
+  });
 }
 
 await sftp.end();
