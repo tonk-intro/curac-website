@@ -156,6 +156,12 @@ main {
   padding: 30px;
 }
 
+@media (min-width: 1000px) {
+  .main-wrapper section {
+    width: 700px;
+  }
+}
+
 .main-wrapper footer {
   display: flex;
   flex-wrap: wrap;
