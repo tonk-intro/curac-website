@@ -153,13 +153,7 @@ main {
 .main-wrapper section {
   align-self: center;
   max-width: 700px;
-  padding: 30px;
-}
-
-@media (min-width: 1000px) {
-  .main-wrapper section {
-    width: 700px;
-  }
+  width: 100%;
 }
 
 .main-wrapper footer {
@@ -197,7 +191,8 @@ ul.icons {
 
 .main-wrapper {
   margin-top: 50px;
-  width: 100%;
+  /* width: 100%; */
+  padding: 30px;
 
   display: flex;
   flex-direction: column;
@@ -245,7 +240,7 @@ ul.mobile-icons {
   display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   main {
     overflow: visible;
   }
