@@ -217,6 +217,7 @@ main footer ul {
 }
 
 .mobile-nav button {
+  display: none;
   margin: 5px;
   border: 1px solid white;
   color: white;
@@ -233,7 +234,7 @@ main footer ul {
 }
  */
 .mobile-nav ul {
-  display: none;
+  display: flex;
 }
 
 ul.mobile-icons {
